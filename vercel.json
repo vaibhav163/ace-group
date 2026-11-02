@@ -1,0 +1,145 @@
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-verde.html",
+      "destination": "/projects/ace-verde",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-terra.html",
+      "destination": "/projects/ace-terra",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-acreville.html",
+      "destination": "/projects/ace-acreville",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-estate.html",
+      "destination": "/projects/ace-estate",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-hanei.html",
+      "destination": "/projects/ace-hanei",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-starlit.html",
+      "destination": "/projects/ace-starlit",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-divino.html",
+      "destination": "/projects/ace-divino",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-parkway.html",
+      "destination": "/projects/ace-parkway",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-palm-floors.html",
+      "destination": "/projects/ace-palm-floors",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-golfshire.html",
+      "destination": "/projects/ace-golfshire",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-platinum.html",
+      "destination": "/projects/ace-platinum",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-city.html",
+      "destination": "/projects/ace-city",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-aspire.html",
+      "destination": "/projects/ace-aspire",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-medalleo.html",
+      "destination": "/projects/ace-medalleo",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-arte.html",
+      "destination": "/projects/ace-arte",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-studio.html",
+      "destination": "/projects/ace-studio",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-city-square.html",
+      "destination": "/projects/ace-city-square",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-medley-avenue.html",
+      "destination": "/projects/ace-medley-avenue",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-153.html",
+      "destination": "/projects/ace-153",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-yxp.html",
+      "destination": "/projects/ace-yxp",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-hive.html",
+      "destination": "/projects/ace-hive",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-edit.html",
+      "destination": "/projects/ace-edit",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ace-capitol.html",
+      "destination": "/projects/ace-capitol",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
