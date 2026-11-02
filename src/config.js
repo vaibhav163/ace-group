@@ -6,6 +6,11 @@ export const SITE = {
   "phoneDisplay": "+91 87997 56026",
   "phoneIntl": "918799756026",
   "formEndpoint": "",
+  "emailjs": {
+    "serviceId": "service_fkmfynb",
+    "templateId": "service_fkmfynb",
+    "publicKey": "xLfYDZXLlR6IeQ-C6"
+  },
   "gaId": "",
   "metaPixelId": "",
   "heroImage": "/assets/img-001.webp",

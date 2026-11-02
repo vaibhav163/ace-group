@@ -15,8 +15,8 @@ export default function Header() {
             {/* <span className="brand-name">
               ACE <em>GROUP</em>
             </span>
-            <span className="brand-sub">Authorized Channel Partner</span>
-          </span> */}
+            <span className="brand-sub">Authorized Channel Partner</span> */}
+          </span>
         </Link>
         <button
           className="nav-toggle"

@@ -8,6 +8,29 @@ import { consent, track } from "./tracking.js";
 export async function submitLead(payload, projectSlug, toast) {
   const projectName = payload.project;
   try {
+    if (SITE.emailjs && SITE.emailjs.serviceId) {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: SITE.emailjs.serviceId,
+          template_id: SITE.emailjs.templateId,
+          user_id: SITE.emailjs.publicKey,
+          template_params: {
+            from_name: payload.name,
+            phone: payload.phone,
+            project: projectName,
+            message: payload.message || "",
+          },
+        }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      track("form_submit", { project: projectSlug, method: "emailjs" });
+      if (typeof window.fbq === "function" && consent.marketing)
+        window.fbq("track", "Lead", { content_name: projectName });
+      toast("Enquiry sent — our desk will call you back shortly.", "ok");
+      return true;
+    }
     if (SITE.formEndpoint) {
       const res = await fetch(SITE.formEndpoint, {
         method: "POST",
