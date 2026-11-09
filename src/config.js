@@ -8,7 +8,7 @@ export const SITE = {
   "formEndpoint": "",
   "emailjs": {
     "serviceId": "service_fkmfynb",
-    "templateId": "service_fkmfynb",
+    "templateId": "template_bdjcyq6",
     "publicKey": "xLfYDZXLlR6IeQ-C6"
   },
   "gaId": "",

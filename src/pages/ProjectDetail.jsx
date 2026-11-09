@@ -246,19 +246,54 @@ export default function ProjectDetail() {
   if (p.rera) facts.push(["RERA No.", p.rera]);
   facts.push(["Price", "On request"]);
 
+  const CITY_BY_CORRIDOR = {
+    "noida-expressway": ["Noida", "Uttar Pradesh"],
+    "yamuna-expressway": ["Greater Noida", "Uttar Pradesh"],
+    "greater-noida-west": ["Greater Noida", "Uttar Pradesh"],
+    gurugram: ["Gurugram", "Haryana"],
+  };
+  const [cityName, stateName] = CITY_BY_CORRIDOR[p.corridor] || ["Noida", "Uttar Pradesh"];
+  const seoTitleBase = p.name + " " + p.location;
+  const seoTitle =
+    (seoTitleBase + " | " + p.config + " — Price on Request").length <= 78
+      ? seoTitleBase + " | " + p.config + " — Price on Request"
+      : seoTitleBase + " | Price on Request";
+  const seoDesc =
+    p.name + ": " + p.config + " at " + p.location + " (" + p.corridorLabel + "). " + p.desc +
+    (p.rera ? " RERA: " + p.rera + "." : "") + " Price on request — call +91 87997 56026.";
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
-      { "@type": "ListItem", position: 2, name: "Projects", item: SITE.url + "/projects" },
+    "@graph": [
       {
-        "@type": "ListItem",
-        position: 3,
-        name: p.corridorLabel,
-        item: SITE.url + "/projects?corridor=" + p.corridor,
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+          { "@type": "ListItem", position: 2, name: "Projects", item: SITE.url + "/projects" },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: p.corridorLabel,
+            item: SITE.url + "/projects?corridor=" + p.corridor,
+          },
+          { "@type": "ListItem", position: 4, name: p.name, item: SITE.url + "/projects/" + p.slug },
+        ],
       },
-      { "@type": "ListItem", position: 4, name: p.name, item: SITE.url + "/projects/" + p.slug },
+      {
+        "@type": "RealEstateListing",
+        name: p.name,
+        description: seoDesc,
+        image: SITE.url + p.img,
+        url: SITE.url + "/projects/" + p.slug,
+        category: p.type,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: p.location,
+          addressLocality: cityName,
+          addressRegion: stateName,
+          addressCountry: "IN",
+        },
+        ...(p.rera ? { identifier: p.rera } : {}),
+      },
     ],
   };
 
@@ -272,11 +307,8 @@ export default function ProjectDetail() {
   return (
     <div className="wrap" ref={rootRef}>
       <Seo
-        title={p.name + " — " + p.location + " | Ace Group"}
-        description={
-          p.name + ": " + p.config + " at " + p.location + " (" + p.corridorLabel + "). " + p.desc +
-          " Price on request — call +91 87997 56026."
-        }
+        title={seoTitle}
+        description={seoDesc}
         path={"projects/" + p.slug}
         image={p.img}
         jsonLd={jsonLd}
