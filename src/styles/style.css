@@ -135,7 +135,7 @@
     background:var(--surface); color:var(--ink); font:inherit;
   }
   .result-count{ color:var(--muted); font-size:.92rem; font-weight:600; }
-  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:22px; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:22px; }
   .card{
     background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
     overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;
@@ -149,7 +149,7 @@
   .card-foot{ position:relative; z-index:2; }
   .card:hover{ transform:translateY(-4px); }
   .card a.card-media{ position:relative; display:block; }
-  .card-media img{ width:100%; aspect-ratio:16/10; object-fit:cover; }
+  .card-media img{ width:100%; aspect-ratio:16/9; object-fit:cover; }
   .badge{
     position:absolute; top:12px; left:12px; background:var(--dark); color:var(--gold-bright);
     font-size:.72rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
@@ -169,7 +169,7 @@
 
   /* ---------- Skeletons & empty state ---------- */
   .skel{ border-radius:var(--radius); overflow:hidden; background:var(--surface); border:1px solid var(--line); }
-  .skel .sk-img{ aspect-ratio:16/10; }
+  .skel .sk-img{ aspect-ratio:16/9; }
   .skel .sk-line{ height:14px; margin:14px 18px; border-radius:6px; }
   .skel .sk-line.short{ width:55%; }
   .shimmer{ background:linear-gradient(100deg, var(--surface-2) 40%, var(--gold-soft) 50%, var(--surface-2) 60%); background-size:200% 100%; animation:shimmer 1.3s infinite linear; }
