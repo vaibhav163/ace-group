@@ -49,8 +49,8 @@ export default function Seo({ title, description, path = "", image, jsonLd }) {
 // matches the static pages' heads).
 export const PAGE_SEO = {
   home: {
-    t: "Ace Group Projects in Noida & Yamuna Expressway | Authorized Channel Partner",
-    d: "Explore Ace Group residential and commercial projects — ACE Parkway, Starlit, Golfshire, Terra, Verde, ACE 153 and more across Noida, the Yamuna Expressway and Greater Noida West. Prices on request. Call +91 87997 56026.",
+    t: "ACE Group Projects in Noida & Greater Noida | ACE Group Sales",
+    d: "Explore ACE Group residential and commercial projects in Noida, Greater Noida and Yamuna Expressway. Enquire now for prices, floor plans and site visits. Call +91 87997 56026.",
   },
   projects: {
     t: "All Ace Group Projects — Noida, Yamuna Expressway & Gr. Noida West",
