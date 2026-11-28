@@ -57,8 +57,8 @@ export const PAGE_SEO = {
     d: "Browse all 23 Ace Group projects: 1–4 BHK residences, penthouses, plots and commercial spaces across Noida, Yamuna Expressway, Greater Noida West and Gurugram. Prices on request.",
   },
   about: {
-    t: "About Ace Group | Noida Developer — Channel Partner",
-    d: "Ace Group is a Noida-based developer led by Ajay Chaudhary, building townships and commercial projects along the Noida & Yamuna Expressways. Learn about the portfolio and this channel-partner website.",
+    t: "About Us | Real Estate Projects in Noida – ACE Group Sales",
+    d: "Learn about ACE Group Sales, your real estate channel partner for premium real estate projects in Noida. Explore residential and commercial properties with us.",
   },
   contact: {
     t: "Enquire — Ace Group Projects | Call +91 87997 56026",
